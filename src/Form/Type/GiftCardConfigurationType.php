@@ -8,6 +8,7 @@ use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -40,6 +41,9 @@ final class GiftCardConfigurationType extends AbstractResourceType
         ]);
         $builder->add('defaultValidityPeriod', DatePeriodType::class, [
             'label' => 'setono_sylius_gift_card.form.gift_card_configuration.default_validity_period',
+        ]);
+        $builder->add('pdfRenderingCss', TextareaType::class, [
+            'label' => 'setono_sylius_gift_card.form.gift_card_configuration.pdf_rendering_css',
         ]);
         $builder->get('defaultValidityPeriod')->addModelTransformer(
             new CallbackTransformer(

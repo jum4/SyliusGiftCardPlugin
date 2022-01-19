@@ -38,6 +38,8 @@ class GiftCardConfiguration implements GiftCardConfigurationInterface
 
     protected ?string $defaultValidityPeriod = null;
 
+    protected ?string $pdfRenderingCss = null;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -176,5 +178,15 @@ class GiftCardConfiguration implements GiftCardConfigurationInterface
     public function setDefaultValidityPeriod(?string $defaultValidityPeriod): void
     {
         $this->defaultValidityPeriod = $defaultValidityPeriod;
+    }
+
+    public function getPdfRenderingCss(): ?string
+    {
+        return $this->pdfRenderingCss;
+    }
+
+    public function setPdfRenderingCss(?string $pdfRenderingCss): void
+    {
+        $this->pdfRenderingCss = $pdfRenderingCss;
     }
 }

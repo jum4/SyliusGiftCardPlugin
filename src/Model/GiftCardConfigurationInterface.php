@@ -42,4 +42,8 @@ interface GiftCardConfigurationInterface extends
     public function getDefaultValidityPeriod(): ?string;
 
     public function setDefaultValidityPeriod(?string $defaultValidityPeriod): void;
+
+    public function getPdfRenderingCss(): ?string;
+
+    public function setPdfRenderingCss(?string $pdfRenderingCss): void;
 }
