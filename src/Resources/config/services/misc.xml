@@ -14,6 +14,7 @@
                  class="Setono\SyliusGiftCardPlugin\Generator\GiftCardPdfGenerator">
             <argument type="service" id="twig"/>
             <argument type="service" id="knp_snappy.pdf"/>
+            <argument>%kernel.project_dir%/public</argument>
         </service>
         <service id="Setono\SyliusGiftCardPlugin\Generator\GiftCardPdfGeneratorInterface"
                  alias="setono_sylius_gift_card.generator.gift_card_pdf" />
